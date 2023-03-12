@@ -1,35 +1,67 @@
 .header {
-    &__nav {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        padding: 10px;
-    }
+   &__nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    min-height: 9vh;
+   }
+   &__logo {
+    height: 50px;
+    width: 100px;
+   }
     &__menu {
-        // display: none;
-        position: absolute;
-        top: 200px;
-        left: 100px;
+        position: fixed;
+        top: 9vh;
+        width: 100%;
+        height: 89vh;
+        text-align: center;
+        transition: all .5s;
         &-item {
-            margin-bottom: 50px;
-            list-style: none;
-            text-align: center;
-            font-weight: 700;
-            cursor: pointer;
-            transition: color .3s;
+            margin: 70px 0;
+            a {
+                text-transform: uppercase;
             &:hover {
-                color: #655bdb;
+                color: #5d56d1;
             }
         }
+        }
     }
-
-    &__language-button {
-        padding: 0 30px;
-        outline: none;
-        border: 2px solid #fff;
-        border-radius: 30px;
-        background-color: transparent;
-        color: #fff;
-
+    &__options {
+        display: flex;
+        &-language {
+            // padding: 15px 30px;
+            outline: none;
+            border: 2px solid #fff;
+            border-radius: 30px;
+            background-color: transparent;
+            color: #fff;
+        }
+        &-burger {
+            border: none;
+            outline: none;
+            text-decoration: none;
+            background-color: transparent;
+            cursor: pointer;
+            
+            &-bar {
+                // position: relative;
+                width: 30px;
+                height: 3px;
+                background-color: #fff;
+                border-radius: 5px;
+                
+                &::before, &::after {
+                    content: '';
+                    // position: absolute;
+                    display: block;
+                    width: 30px;
+                    height: 3px;
+                    background-color: #fff;
+                    top: 0;
+                    bottom: 0;
+                }
+            }
+        }
     }
 }
