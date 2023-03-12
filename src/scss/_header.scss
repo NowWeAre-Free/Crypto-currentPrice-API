@@ -1,0 +1,25 @@
+.header {
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 10px;
+    }
+    &__menu {
+        // display: none;
+        position: absolute;
+        top: 200px;
+        left: 100px;
+        &-item {
+            margin-bottom: 50px;
+            list-style: none;
+            text-align: center;
+            font-weight: 700;
+            cursor: pointer;
+            transition: color .3s;
+            &:hover {
+                color: #655bdb;
+            }
+        }
+    }
+}
