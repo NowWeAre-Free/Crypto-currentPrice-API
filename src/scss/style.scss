@@ -3,6 +3,11 @@
 //google fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     min-height: 100vh;
     background-image: url("/images/background.png");
@@ -11,4 +16,5 @@ body {
     background-size: cover;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
+    padding: 10px;
 }
