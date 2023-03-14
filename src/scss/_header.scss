@@ -31,7 +31,7 @@
 
         @media (min-width: 600px) {
             width: 45%;
-            }
+        }
 
         @media (min-width: 992px) {
             position: static;
@@ -66,14 +66,17 @@
                     left: 0;
                     border-radius: 20px;
                     transition: width .3s ease-in-out;
+
                     @media (min-width: 600px) {
                         background-color: hsla(267, 22%, 90%, 0.801);
                     }
+
                     @media (min-width: 992px) {
                         background-color: #5f57d3;
                     }
 
                 }
+
                 &:hover,
                 &:hover::after {
                     width: 100%;
@@ -82,12 +85,14 @@
             }
         }
     }
+
     &__options {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         width: 100%;
         gap: 10px;
+
         &-language {
             color: #fff;
             background-color: transparent;
@@ -97,34 +102,59 @@
             outline: none;
             font-weight: 700;
             cursor: pointer;
+
             &:hover {
-                color:hsla(267, 22%, 90%, 0.801);
+                color: hsla(267, 22%, 90%, 0.801);
                 border: 1px solid hsla(267, 22%, 90%, 0.801);
             }
         }
-        @media (min-width: 600px) {
 
-        }
+        @media (min-width: 600px) {}
+
         @media (min-width: 992px) {
             justify-content: flex-end;
             width: 10%;
         }
+
         &-burger {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             background-color: transparent;
             outline: none;
             border: none;
             cursor: pointer;
+            transition: .5s;
+            @media (min-width: 992px) {
+                display: none;
+            }
+
+            
             &-bar {
                 margin: 5px;
                 width: 30px;
                 height: 3px;
                 background-color: #ffffff;
                 border-radius: 10px;
+                
             }
-            @media (min-width: 992px) {
-                display: none;
+
+            &--active &-bar {
+                &:first-child {
+                    transform: translateY(-300px);
+                }
+                
+                &:nth-child(2) {
+                    transform: rotate(-405deg) translateY(8px);
+                    width: 40px;
+                }
+                
+                &:nth-child(3) {
+                    transform: rotate(-320deg) translateY(-10px);
+                    margin-bottom: 15px;
+                    width: 40px;
+                }
             }
         }
     }
