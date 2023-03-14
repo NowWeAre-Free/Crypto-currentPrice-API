@@ -3,4 +3,5 @@ const menu = document.querySelector(".nav__menu");
 
 burger.addEventListener("click", () => {
     menu.classList.toggle("nav__menu--active");
+    burger.classList.toggle("nav__options-burger--active")
 })
