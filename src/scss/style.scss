@@ -8,7 +8,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+    overflow: hidden;
+}
 body {
     height: 100vh;
     background-image: url("/images/background.png");
@@ -17,5 +19,4 @@ body {
     background-size: cover;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
 }
