@@ -1,67 +1,79 @@
 .header {
-   &__nav {
-    display: flex;
-    justify-content: space-between;
     position: relative;
     width: 100%;
-    min-height: 9vh;
-   }
-   &__logo {
-    height: 50px;
-    width: 100px;
-   }
-    &__menu {
-        position: fixed;
-        top: 9vh;
-        width: 100%;
-        height: 89vh;
-        text-align: center;
-        transition: all .5s;
-        &-item {
-            margin: 70px 0;
-            a {
-                text-transform: uppercase;
-            &:hover {
-                color: #5d56d1;
-            }
-        }
-        }
+    min-height: 10vh;
+    padding: 10px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+        width: 100px;
+        height: 50px;
     }
-    &__options {
+
+    &__menu {
         display: flex;
-        &-language {
-            // padding: 15px 30px;
-            outline: none;
-            border: 2px solid #fff;
-            border-radius: 30px;
-            background-color: transparent;
-            color: #fff;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        min-height: 90vh;
+        width: 100%;
+        text-align: center;
+        transition: .5s;
+        list-style-type: none;
+        background-color: hsla(268, 33%, 45%, 0.742);
+        opacity: 1;
+
+        @media (min-width: 600px) {
+            width: 45%;
         }
-        &-burger {
-            border: none;
-            outline: none;
-            text-decoration: none;
+
+        @media (min-width: 992px) {
+            position: static;
+            flex-direction: row;
+            align-items: center;
             background-color: transparent;
-            cursor: pointer;
-            
-            &-bar {
-                // position: relative;
-                width: 30px;
-                height: 3px;
-                background-color: #fff;
-                border-radius: 5px;
-                
-                &::before, &::after {
+            width: 60%;
+            min-height: 0;
+        }
+
+        &--active {
+            opacity: 0;
+        }
+
+        &-item {
+            a {
+                position: relative;
+                text-decoration: none;
+                color: #fff;
+                font-weight: 600;
+                text-transform: uppercase;
+
+                &::after {
                     content: '';
-                    // position: absolute;
-                    display: block;
-                    width: 30px;
+                    position: absolute;
+                    width: 0%;
+                    background-color: #43255c;
                     height: 3px;
-                    background-color: #fff;
-                    top: 0;
                     bottom: 0;
+                    left: 0;
+                    border-radius: 20px;
+                    transition: width .3s ease-in-out;
+
+                }
+
+                &:hover,
+                &:hover::after {
+                    width: 100%;
+                    color: #f4b345;
                 }
             }
         }
     }
+    
 }
