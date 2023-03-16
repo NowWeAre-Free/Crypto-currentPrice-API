@@ -26,11 +26,13 @@
         text-align: center;
         transition: .5s;
         list-style-type: none;
-        background-color: hsla(268, 33%, 45%, 0.742);
-        opacity: 0;
+        background-color: hsl(268, 33%, 45%);
+        transform: translate(150%);
+        z-index: 999;
 
         @media (min-width: 600px) {
             width: 45%;
+            background-color: hsla(268, 33%, 45%, 0.609);
         }
 
         @media (min-width: 992px) {
@@ -45,7 +47,7 @@
         }
 
         &--active {
-            opacity: 1;
+            transform: translate(0);
         }
 
         &-item {
@@ -99,7 +101,6 @@
             border: 2px solid #fff;
             border-radius: 20px;
             padding: 10px 20px;
-            outline: none;
             font-weight: 700;
             cursor: pointer;
 
@@ -122,38 +123,37 @@
             justify-content: center;
             align-items: center;
             background-color: transparent;
-            outline: none;
             border: none;
             cursor: pointer;
-            transition: .5s;
+            transition: .1s;
+
             @media (min-width: 992px) {
                 display: none;
             }
 
-            
+
             &-bar {
-                margin: 5px;
+                margin: 3px;
                 width: 30px;
                 height: 3px;
                 background-color: #ffffff;
                 border-radius: 10px;
-                
+                align-items: center;
+
             }
 
             &--active &-bar {
                 &:first-child {
                     transform: translateY(-300px);
                 }
-                
+
                 &:nth-child(2) {
-                    transform: rotate(-405deg) translateY(8px);
-                    width: 40px;
+                    transform: rotate(-405deg) translateY(5px);
                 }
-                
+
                 &:nth-child(3) {
-                    transform: rotate(-320deg) translateY(-10px);
+                    transform: rotate(-320deg) translateY(-7px);
                     margin-bottom: 15px;
-                    width: 40px;
                 }
             }
         }
