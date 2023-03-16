@@ -68,5 +68,19 @@
                 background-color: #a9a9a9;
             }
         }
+        &__brands {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            &-button {
+                padding: 10px;
+                min-width: 80px;
+                background-color: #a9a9a9;
+                border: none;
+                &:hover {
+                    background-color: #c6c5c5;
+                }
+            }
+        }
     }
 }
