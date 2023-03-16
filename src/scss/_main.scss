@@ -1,18 +1,47 @@
 .main {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
     min-height: 100vh;
     margin-top: 10px;
-    .header {
-        &__description {
-            font-size: 32px;
+    .description {
+        &__text {
+            font-size: 1.8rem;
             text-align: center;
-            &--color {
+            &-color {
                 color: #f4b345;
                 font-weight: 700;
                 text-transform: uppercase;
+            }
+        }
+    }
+    .sign-up {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        width: 100%;
+        gap: 20px;
+
+        &__info {
+            width: 100%;
+            text-align: center;
+            color: inherit;
+            text-decoration: none;
+            font-size: 1.5rem;
+            &--gift {
+                color: #f4b345;
+            }
+        }
+        &__register-button {
+            padding: 15px;
+            width: 100%;
+            background-color: #f4b345;
+            border: none;
+            font-size: 1rem;
+            font-weight: 700;
+            &:hover {
+                background-color: #f6c164;
             }
         }
     }
