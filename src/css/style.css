@@ -188,6 +188,59 @@
 .main .sign-up__register-button:hover {
   background-color: #f6c164;
 }
+.main .sign-up__choice {
+  position: relative;
+  color: #a9a9a9;
+}
+.main .sign-up__choice::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 52%;
+  right: 105%;
+  width: 100%;
+  height: 1px;
+  background-color: #a9a9a9;
+}
+.main .sign-up__choice::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 52%;
+  left: 105%;
+  width: 100%;
+  height: 1px;
+  background-color: #a9a9a9;
+}
+.main .sign-up__brands {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.main .sign-up__brands-button {
+  padding: 10px;
+  min-width: 80px;
+  background-color: #a9a9a9;
+  border: none;
+}
+.main .sign-up__brands-button:hover {
+  background-color: #c6c5c5;
+}
+.main .crypto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  gap: 10px;
+}
+.main .crypto__currency {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
 
 * {
   margin: 0;

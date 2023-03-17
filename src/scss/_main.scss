@@ -83,4 +83,19 @@
             }
         }
     }
+    .crypto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 35px;
+        gap: 10px;
+        &__currency {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+    }
 }
