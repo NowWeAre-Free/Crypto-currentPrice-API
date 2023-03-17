@@ -18,8 +18,8 @@ fetch(url)
   .then(data => {
 
     const bitcoinPrice = data["bitcoin"]["usd"];
-    const ethereumPrice = data["ethereum"]["usd"];
-    const hexPrice = data["hex"]["usd"];
+    const ethereumPrice = data["ethereum"]["usd"].toFixed(1);
+    const hexPrice = data["hex"]["usd"].toFixed(3);
     btc.innerText = `$ ${bitcoinPrice}`;
     eth.innerText = `$ ${ethereumPrice}`;
     hex.innerText = `$ ${hexPrice}`;
